@@ -46,6 +46,7 @@
     <main role="main">
     <section class="px-4 py-5 my-5 text-center">
         <div class="form-group">
+            <div id="1"></div><div id="2"></div>
                 <H2><%= "Make Note" %></H2>
                     <br>
                     <textarea class="form-control bg-light text-center" id="text2crypt" style="height: 228px" aria-describedby="textdatadesc" placeholder="PutYourTextHere">Put Your Text Here </textarea>
@@ -88,6 +89,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
 <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 --><script src="script.js?nocache=<%= random.nextInt(100000) %>"></script>
 

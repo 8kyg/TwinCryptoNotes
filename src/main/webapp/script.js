@@ -26,9 +26,6 @@ if(getId && jsPwd){
 $('#btn-createlink').on('click', function(e){
     $.post ( "TwinCryptoNote", { data: $('#text2crypt').val() } )
         .done(function ( data ){
-//  let m = 'https://developer.mozilla.org';
-//            let a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
-//            window.location.
             let link = window.location.href;
             if(link.indexOf('?') > 0) link = link.substring(0,link.indexOf('?'));
 
@@ -36,4 +33,17 @@ $('#btn-createlink').on('click', function(e){
 
     });
 });
+//<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+var message = "café";
+var key = "something";
+
+var encrypted = CryptoJS.AES.encrypt(message, key);
+//equivalent to CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(message), key);
+var decrypted = CryptoJS.AES.decrypt(encrypted, key);
+
+$('#1').text("Encrypted: "+encrypted);
+$('#2').text("Decrypted: "+decrypted.toString(CryptoJS.enc.Utf8));
+
+console.log(encrypted.toString());
+console.log(decrypted.toString(CryptoJS.enc.Utf8));
 
