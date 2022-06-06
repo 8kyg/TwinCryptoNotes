@@ -85,7 +85,7 @@ public class HelloServlet extends HttpServlet {
                     // Here need generated encryptionKey and return
                     json.put("newid",new_random_id);
                 }
-            } else { //Read and encrytion message
+            } else { //Read and encryption message
 
                 Connection c = stm.getConnection();
                 PreparedStatement p = c.prepareStatement(query_select);
